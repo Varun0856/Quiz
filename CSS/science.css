@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(135deg, #e6f7ff, #ccf2ff);
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+.app{
+    background: #f2f9ff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.app h1{
+    font-size: 25px;
+    color: #0b3d91;
+    font-weight: 600;
+    border-bottom: 1px solid #89c2d9;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 0;
+}
+.quiz h2{
+    font-size: 18px;
+    color: #0b3d91;
+    font-weight: 600;
+}
+.btn{
+    background: #ffffff;
+    color: #2c3e50;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #89c2d9;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.btn:hover:not([disabled]){
+    background: #f5f5f5;
+    color: #0b3d91;
+    background: linear-gradient(135deg, #d1e9ff, #e6f7ff)
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: linear-gradient(135deg, #32a852, #0b3d91);
+    color: #ffffff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+}
+.correct{
+    background: #d4edda;
+    color: #155724;
+    animation: correctAnimation 0.5s ease forwards;
+}
+.incorrect{
+    background: #ff9393;
+}
+
+@keyframes correctAnimation {
+    0% {
+        background-color: #d4edda;
+        transform: scale(1);
+    }
+    50% {
+        background-color: #b9e4d3;
+        transform: scale(1.05);
+    }
+    100% {
+        background-color: #d4edda;
+        transform: scale(1);
+    }
+}
+
+@keyframes emojiPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes emojiPopUp {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -80%) scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -150%) scale(0);
+    }
+}
+
+.correct::after {
+    content: "🔬💡🧪";
+    font-size: 20px;
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    animation: emojiPop 1s ease forwards;
+}
+
+.emoji-pop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    animation: emojiPopUp 0.8s ease forwards;
+}

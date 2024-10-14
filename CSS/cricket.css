@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(to right, #3CB371, #FFD700);
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+.app{
+    background: #ffffff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.app h1{
+    font-size: 25px;
+    color: #1c4b27; /* Darker green */
+    font-weight: 600;
+    border-bottom: 1px solid #9dc69e; /* Soft green */
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 0;
+}
+.quiz h2{
+    font-size: 18px;
+    color: #1c4b27; /* Dark green */
+    font-weight: 600;
+}
+.btn{
+    background: #ffffff;
+    color: #1c4b27; /* Darker green */
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #9dc69e; /* Light green */
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.btn:hover:not([disabled]){
+    background: #daf1db; /* Light green on hover */
+    color: #1c4b27;
+    background: linear-gradient(135deg, #9dc69e, #daf1db); /* Darker green to lighter green */
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: linear-gradient(135deg, #1e8449, #229954); /* Dark green gradients */
+    color: #ffffff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+}
+.correct{
+    background: #c3e6cb; /* Soft green for correct answers */
+    color: #155724;
+    animation: correctAnimation 0.5s ease forwards;
+}
+.incorrect{
+    background: #ffcccc; /* Light red for incorrect answers */
+}
+
+@keyframes correctAnimation {
+    0% {
+        background-color: #c3e6cb;
+        transform: scale(1);
+    }
+    50% {
+        background-color: #a9d5b6;
+        transform: scale(1.05);
+    }
+    100% {
+        background-color: #c3e6cb;
+        transform: scale(1);
+    }
+}

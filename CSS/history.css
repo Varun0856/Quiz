@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #f5f5dc, #d2b48c, #d0a46b); /* Light beige to warm brown gradient */
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.app {
+    background: #fdf5e6; /* Old lace for a vintage feel */
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    border: 1px solid #d1b79d; /* Antique gold border */
+}
+
+.app h1 {
+    font-size: 28px; /* Slightly larger for prominence */
+    color: #3d2b1f; /* Deep rich brown */
+    font-weight: 700; /* Bold for historical elegance */
+    border-bottom: 2px solid #d1b79d; /* Thicker antique gold border */
+    padding-bottom: 15px;
+    margin-bottom: 20px; /* Increased spacing */
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 22px; /* Slightly larger for better readability */
+    color: #3d2b1f; /* Deep rich brown */
+    font-weight: 600;
+    margin-bottom: 15px; /* Space between question and options */
+}
+
+.btn {
+    background: #fffaf0; /* Floral white for a soft vintage look */
+    color: #3d2b1f; /* Deep rich brown */
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #d1b79d; /* Antique gold */
+    padding: 12px; /* Increased padding */
+    margin: 10px 0;
+    text-align: center; /* Center align text */
+    border-radius: 6px; /* Slightly more rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover:not([disabled]) {
+    background: #f5f5f5; /* Light gray for a subtle hover effect */
+    color: #3d2b1f; /* Deep rich brown */
+    background: linear-gradient(135deg, #e0d9c4, #d1b79d); /* Antique gold gradient */
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+#next-btn {
+    background: linear-gradient(135deg, #6b4f3f, #3d2b1f); /* Rich chocolate to deep brown gradient */
+    color: #ffffff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 12px; /* Increased padding */
+    margin: 20px auto 0;
+    border-radius: 6px; /* Slightly more rounded corners */
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.correct {
+    background: #d4edda; /* Light green */
+    color: #155724; /* Dark green */
+    animation: correctAnimation 0.5s ease forwards;
+    border-radius: 6px; /* Rounded corners */
+    padding: 10px; /* Padding for better text spacing */
+}
+
+.incorrect {
+    background: #ff9393; /* Light red */
+    color: #721c24; /* Dark red for text */
+    border-radius: 6px; /* Rounded corners */
+    padding: 10px; /* Padding for better text spacing */
+}
+
+@keyframes correctAnimation {
+    0% {
+        background-color: #d4edda;
+        color: black;
+        transform: scale(1);
+    }
+    50% {
+        background-color: #b9e4d3;
+        colot: black;
+        transform: scale(1.05);
+    }
+    100% {
+        background-color: #7ade91;
+        color:black;
+        transform: scale(1);
+    }
+}
+
+@keyframes emojiPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes emojiPopUp {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -80%) scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -150%) scale(0);
+    }
+}
+
+
+.emoji-pop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    animation: emojiPopUp 0.8s ease forwards;
+}
