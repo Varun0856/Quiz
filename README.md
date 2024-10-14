@@ -18,20 +18,6 @@ This is a **Quiz Application** designed to test users' knowledge across a variet
 - **CSS**: For styling and layout.
 - **JavaScript**: For quiz logic, question handling, and scoring.
 
-## Installation
-
-1. **Clone the repository** to your local machine:
-    ```bash
-    git clone https://github.com/Varun0856/quiz-app.git
-    ```
-
-2. **Navigate into the project directory**:
-    ```bash
-    cd quiz-app
-    ```
-
-3. **Run the app** by opening the `index.html` file in your browser.
-
 ## How to Use
 1. Open the app and select your desired quiz category (General Knowledge, Cricket, History, or Science).
 2. Answer the multiple-choice questions by selecting one of the provided options.
