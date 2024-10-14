@@ -22,7 +22,7 @@ This is a **Quiz Application** designed to test users' knowledge across a variet
 
 1. **Clone the repository** to your local machine:
     ```bash
-    git clone https://github.com/yourusername/quiz-app.git
+    git clone https://github.com/Varun0856/quiz-app.git
     ```
 
 2. **Navigate into the project directory**:
