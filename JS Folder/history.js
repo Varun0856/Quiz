@@ -137,19 +137,6 @@ function selectAnswer(e){
     if(isCorrect){
         selectedBtn.classList.add("correct");
         score++;
-
-          // Create the emoji element
-          const emoji = document.createElement("span");
-          emoji.innerHTML = "🎉"; // You can use any emoji you like
-          emoji.classList.add("emoji-pop");
-  
-          // Append the emoji to the button
-          selectedBtn.appendChild(emoji);
-  
-          // Automatically remove the emoji after the animation
-          setTimeout(() => {
-              emoji.remove();
-          }, 800); // Match the duration of the animation in the CS
     }else{
         selectedBtn.classList.add("incorrect");
     }
